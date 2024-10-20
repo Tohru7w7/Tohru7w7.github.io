@@ -22,7 +22,20 @@ header>div>input{
 header>div>i{
     color: white;
 }
-
+header>div>ul{
+    display: flex;
+    justify-content: center;
+}
+header>div>ul>li{
+    list-style: none;
+    color: white;
+    font-size: 40px;
+    font-style:italic;
+}
+header>div>ul>input{
+    display: flex;
+    margin-left: 40px;
+}
 nav{
     height: 25px;
     /*background-color: #ebb5e7;*/
@@ -36,4 +49,10 @@ nav>ul>li{
     margin-left: 50px;
     font-size: 20px;
     color: white;
+}
+section>img{
+    margin-top: 20px;
+    margin-left: 20px;
+    image-resolution: 300px;
+
 }
