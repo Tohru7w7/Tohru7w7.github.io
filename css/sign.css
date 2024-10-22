@@ -17,10 +17,6 @@ header{
     width: 100%;
     height: 20%;
 }
-#icono{
-    height: 30%;
-    width: 10%;
-}
 .sign{ 
     height:60%;
     width: 80%;
@@ -37,6 +33,9 @@ header{
     margin-top: 20px;
     padding: 0 0 20px 0;
     border-bottom: 1px solid white;
+    font-size: 70px;
+    font-family: Campana;
+    font-weight: 40;
 }
 .sign>form{
     margin-top: 25px;
@@ -108,7 +107,10 @@ div>a{
     justify-content: center;
     margin-top: 10px;
 }
-#txt{
+div>label{
     font-family: Campana;
+    font-size: 100px;
+
 }
+
 
