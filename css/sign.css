@@ -95,4 +95,10 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: #f356ac;
 }
+div>a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
 
