@@ -1,4 +1,8 @@
-*{
+
+@font-face {
+    font-family: Campana;
+    src: url("../fonts/CampanaScript.otf");
+}*{
     margin: 0;
     padding: 0;
 }

@@ -78,12 +78,14 @@ nav>ul>li{
 }
 #login{
     list-style: none;
-    margin-top: 30px;
+    margin-top: 33px;
+    text-decoration: none;
 }
 #sign{
     height: 39px;
     width: 85px;
     margin-top: 30px;
+    line-height: 2rem;
     margin-left: 10px;
     margin-right: 20px;
     border-radius: 30px;
@@ -92,6 +94,7 @@ nav>ul>li{
     color: white;
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
 }
 div>a{
     display: flex;
@@ -110,5 +113,5 @@ section>img{
 }
 section>img#img8{
     margin-left: 80px;
-    
+    margin-right: 0%;
 }
