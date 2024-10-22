@@ -17,6 +17,10 @@ header{
     width: 100%;
     height: 20%;
 }
+#icono{
+    height: 30%;
+    width: 10%;
+}
 .sign{ 
     height:60%;
     width: 80%;
@@ -103,6 +107,8 @@ div>a{
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
+}
+#txt{
+    font-family: Campana;
 }
 
