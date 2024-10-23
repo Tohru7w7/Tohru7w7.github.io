@@ -26,12 +26,12 @@ header>div>input {
     margin-top: 40px;
     margin-left: 20px;
     border-radius: 18px;
-    border: white;
+    border: rgb(0, 0, 0);
     font-size: 1.1rem;
 }
 
 header>div>i {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 header>div>ul {
@@ -41,7 +41,7 @@ header>div>ul {
 
 header>nav>ul>li {
     list-style: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 40px;
     font-style: italic;
 }
@@ -79,14 +79,14 @@ nav>ul>li {
     list-style: none;
     margin-left: 50px;
     font-size: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 #logsig {
     display: flex;
     justify-content: center;
     list-style: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -107,7 +107,7 @@ nav>ul>li {
     border-radius: 30px;
     background-color: #FFBDD8;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
@@ -117,7 +117,7 @@ div>a {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
 }
