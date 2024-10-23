@@ -148,13 +148,22 @@ section>img {
     margin-right: 20px;
     width: 88%;
 }
-#inicio>img{
+#icono{
     width: 20%;
-
+    margin-top: 50px;
 }
-
-#inicio>nav>ul {
+#titles{
+    background-color: #FFBDD8;
+    margin-top: 15px;
+    height: 20%;
+    width: 100%;
+}
+#titles>ul>li {
     display: flex;
-    justify-content: center;
-    padding-top: 10px;
+    justify-content: center; 
+    padding-bottom: 20px;
+    list-style: none;
+    margin-left: 50px;
+    font-size: 20px;
+    color: white;
 }
