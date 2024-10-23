@@ -2,14 +2,17 @@
     font-family: Campana;
     src: url("../fonts/CampanaScript.otf");
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: #B5D8EB;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -17,7 +20,8 @@ header{
     /*background-color: #B5D8EB;*/
     position: relative;
 }
-header>div>input{
+
+header>div>input {
     height: 30px;
     margin-top: 40px;
     margin-left: 20px;
@@ -25,36 +29,44 @@ header>div>input{
     border: white;
     font-size: 1.1rem;
 }
-header>div>i{
+
+header>div>i {
     color: white;
 }
-header>div>ul{
+
+header>div>ul {
     display: flex;
     justify-content: center;
 }
-header>nav>ul>li{
+
+header>nav>ul>li {
     list-style: none;
     color: white;
     font-size: 40px;
-    font-style:italic;
+    font-style: italic;
 }
-header>div>ul>input{
+
+header>div>ul>input {
     display: flex;
     margin-left: 40px;
 }
-nav{
+
+nav {
     height: 25px;
     /*background-color: #ebb5e7;*/
 }
-nav>ul{
+
+nav>ul {
     display: flex;
     justify-content: center;
 }
-nav>h1{
+
+nav>h1 {
     display: flex;
     justify-content: centers;
 }
-#titulo{
+
+#titulo {
     display: flex;
     justify-content: center;
     font-family: Campana;
@@ -62,13 +74,15 @@ nav>h1{
     font-size: 70px;
     margin-top: 20px;
 }
-nav>ul>li{
+
+nav>ul>li {
     list-style: none;
     margin-left: 50px;
     font-size: 20px;
     color: white;
 }
-#logsig{
+
+#logsig {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -76,12 +90,14 @@ nav>ul>li{
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
-#login{
+
+#login {
     list-style: none;
     margin-top: 33px;
     text-decoration: none;
 }
-#sign{
+
+#sign {
     height: 39px;
     width: 85px;
     margin-top: 30px;
@@ -96,7 +112,8 @@ nav>ul>li{
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
 }
-div>a{
+
+div>a {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -104,14 +121,40 @@ div>a{
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
 }
-section>img{
+
+section {
+    display: flex;
+}
+
+section>img {
     margin-top: 20px;
     margin-left: 20px;
     width: 40%;
     height: 60%;
+}
+
+#img>div>h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: Campana;
+    font-size: 90px;
+    margin-bottom: 5px;
+    font-weight: 3;
+}
+
+#img>div>img#img8 {
+    margin-left: 80px;
+    margin-right: 20px;
+    width: 88%;
+}
+#inicio>img{
+    width: 20%;
 
 }
-section>img#img8{
-    margin-left: 80px;
-    margin-right: 0%;
+
+#inicio>nav>ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
