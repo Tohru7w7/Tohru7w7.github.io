@@ -124,23 +124,15 @@ div>a {
 
 section {
     display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-section>img {
+#img {
     margin-top: 20px;
     margin-left: 20px;
-    width: 40%;
-    height: 60%;
-}
-
-#img>div>h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    font-family: Campana;
-    font-size: 90px;
-    margin-bottom: 20px;
-    font-weight: 2.5;
+    width: 28%;
+    height: 496.328px;
 }
 #titles{
     background-color: #FFBDD8;
@@ -153,10 +145,14 @@ section>img {
     height: 100px;
     position: relative;
 }
-#img>div>img#img8 {
-    margin-left: 80px;
+#img8 {
+    margin-top: 20px;
+    height: 60%;
+    width: 50%;
+    margin-left: 15px;
     margin-right: 20px;
-    width: 88%;
+
+    
 }
 #titles>h1{
     margin-top: 20px;
