@@ -136,7 +136,7 @@ section {
 #titles{
     display: flex;
     justify-content: space-between;
-    background-color: #B5D8EB;
+    background-color: #FFBDD8;
     margin-top: 15px;
     height: 20%;
     width: 100%;
@@ -174,8 +174,8 @@ section {
     justify-content: center; 
     margin-top: 40px;
     list-style: none;
-    font-size: 70px;
-    color: #1d1d1d;
+    font-size: 60px;
+    color: #161616;
     font-family: Campana;
     font-weight: 3;
 }
@@ -187,7 +187,7 @@ section>i{
 #store{
     display: flex;
     margin-top: 0;
-    background-color: #B5D8EB;
+    background-color: #FFBDD8;
     width: 100%;
     height: 450px;
 }
@@ -199,7 +199,7 @@ section>i{
 }
 #utilities{
     display: flex;
-    background-color: #B5D8EB;
+    background-color: #FFBDD8;
     margin-bottom: 0;
 }
 #utilities>h2{
@@ -219,7 +219,7 @@ section>i{
 }
 #utilities2{
     display: flex;
-    background-color: #B5D8EB;
+    background-color: #FFBDD8;
 }
 #utilities2>h2{
     padding-left: 200px;
@@ -239,7 +239,7 @@ section>i{
 #second{
     display: flex;
     margin-top: 0;
-    background-color: #B5D8EB;
+    background-color: #FFBDD8;
     width: 100%;
     height: 750px;
 }
