@@ -133,6 +133,7 @@
     }
     footer>nav>ul{
         padding-bottom: 20px;
+        padding-right: 30px;
     }
     footer>nav>ul>li{
         font-size: 12px;
