@@ -1,0 +1,21 @@
+@media (max-width:425px){
+    section>div#img{
+        display: none;
+    }
+    #phone{
+        width: 425px;
+    }
+    #phone>img#icono{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #txtNC{
+        margin-left: 10px;
+    }
+    #txt{
+        margin-left: 63.75px;
+    }
+   div>.sign{
+    margin-left: 63.75px;
+   } 
+}
