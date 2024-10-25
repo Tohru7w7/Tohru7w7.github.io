@@ -1,0 +1,98 @@
+@media (max-width:425px){
+    header{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    header>div>input{
+        display: none;
+    }
+    header>div>i{
+        display: flex;
+        padding-left: 15px;
+    }
+    header>div>i.fa-magnifying-glass{
+        display: flex;
+        padding-top: 42px;
+    }
+    header>div>i.fa-bars{
+        display: flex;
+        padding-top: 10px;
+    }
+    #titulo{
+        font-weight: 2;
+        margin-left: 110px;
+    }
+   #logsig>a{
+        margin-top: 42px;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #sign{
+        width: 45px;
+        line-height: 1rem;
+        margin-top: 42px;
+        border: none;
+        background: none;
+    }
+    #menu{
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+    #img{
+        display: none;
+    }
+    #img8{
+        display: flex;
+        justify-content: center;
+        height: 40%;
+        width: 80%;
+    }
+    #titles{
+        display: flex;
+        width: 100%;
+    }
+    #titles>h1{
+        font-size: 45px;
+        width: 20px;
+        margin-left: 10px;
+    }
+    #titles>ul{
+        margin-left: 80px;
+    }
+    #titles>ul>li{
+        font-size: 55px;
+        padding-top: 5px;
+        
+    }
+    #titles>div>i{
+        display: flex;
+        justify-content: center;
+    }
+    #titles>div>i.fa-cart-shopping{
+        padding-top: 10px;
+    }
+    #utilities>h2{
+        padding-left: 10px;
+    }
+    #utilities>h3{
+        padding-left: 35%;
+    }
+    #store>div{
+        display: flex;
+        justify-content: center;
+    }
+    #store>div>img{
+        height: 200px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #store>div>img#nopimg{
+        display: none;
+    }
+    
+}
