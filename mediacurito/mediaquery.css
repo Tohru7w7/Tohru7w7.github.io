@@ -82,6 +82,9 @@
     #utilities>h3{
         padding-left: 35%;
     }
+    #store{
+        height: 300px;
+    }
     #store>div{
         display: flex;
         justify-content: center;
@@ -93,6 +96,36 @@
     }
     #store>div>img#nopimg{
         display: none;
+    }
+    #utilities2>h2{
+        padding-left: 10px;
+        width: 100px;
+        height: 30px;
+    }
+    #utilities2>h3{
+        padding-left: 43%;
+    }
+    #second{
+        height: 400px;
+    }
+    #second>div{
+        display: flex;
+        justify-content: center;
+    }
+    #second>div>img{
+        height: 200px;
+        padding-top: 100px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #second>div>img#nopimg{
+        display: none;
+    }
+    footer{
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        height: 30px;
     }
     
 }
