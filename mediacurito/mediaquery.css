@@ -49,8 +49,8 @@
     #img8{
         display: flex;
         justify-content: center;
-        height: 40%;
-        width: 80%;
+        height: 20%;
+        width: 60%;
     }
     #titles{
         display: flex;
