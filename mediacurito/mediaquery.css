@@ -98,12 +98,13 @@
         display: none;
     }
     #utilities2>h2{
+        display: flex;
         padding-left: 10px;
-        width: 100px;
-        height: 30px;
+        font-size: 45px;
+        width: 60%;
     }
     #utilities2>h3{
-        padding-left: 43%;
+        padding-left: 25px;
     }
     #second{
         height: 400px;
@@ -114,7 +115,7 @@
     }
     #second>div>img{
         height: 200px;
-        padding-top: 150px;
+        padding-top: 100px;
         padding-left: 25px;
         padding-right: 25px;
     }
