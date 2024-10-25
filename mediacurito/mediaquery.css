@@ -124,8 +124,21 @@
     footer{
         display: flex;
         justify-content: left;
-        width: 100vh;
+        width: 425px;
         height: 30px;
+    }
+    footer>nav{
+        width: 425px;
+        margin-left: 0;
+    }
+    footer>nav>ul{
+        padding-bottom: 20px;
+    }
+    footer>nav>ul>li{
+        font-size: 12px;
+    }
+    #iconos{
+       display: none;
     }
     
 }
