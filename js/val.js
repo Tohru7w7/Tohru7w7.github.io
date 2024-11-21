@@ -4,8 +4,8 @@ var users = [
 ];
 
 document.getElementById("btnLogin").addEventListener("click", function () {
-    var userr = document.getElementsByName("user").value.trim();
-    var password = document.getElementsByName("pass").value.trim();
+    var userr = document.getElementById("user").value.trim();
+    var password = document.getElementById("pass").value.trim();
 
     
     var loggedInUser = users.find(

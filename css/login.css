@@ -59,7 +59,7 @@ section>div>input{
     border: none;
     border-radius: 15px;
 }
-#login{
+#btnLogin{
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -75,7 +75,7 @@ section>div>input{
     font-family: 'Times New Roman', Times, serif;
 
 }
-#login:hover{
+#btnLogin:hover{
     background-color: #7dc6ee;
     cursor: pointer;
 }
