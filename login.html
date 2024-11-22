@@ -13,23 +13,25 @@
             <img id="image1" src="./img/image1.png" alt="">
             
         </div>
-        <div id="phone">
-            <img id="icono" src="./img/icono3.png" alt="">
-            <h1>Bienvenid@</h1>
-            <h2 id="txtNC"  >Nombre</h2>
-            <input id="user" name="user" type="text" required>
-            <h2 id="txtNC"  >Contraseña</h2>
-            <input id="pass" name="pass" type="text" required><br>
-            
-                <button id="btnLogin" class="login" >Login</button>
-            
-            <div class="sign">
-                 <a href="./sign.html">Registrate aquí</a>
-           </div>
-            
-        </div>
+        <form action="./php/login.php" method="POST" >
+            <div id="phone" action="" >
+                <img id="icono" src="./img/icono3.png" alt="">
+                <h1>Bienvenid@</h1>
+                <h2 id="txtNC"  >Nombre</h2>
+                <input id="user" name="txtuser" type="text" required>
+                <h3 id="txtNC"  >Contraseña</h3>
+                <input id="pass" name="txtpass" type="password" required><br>
+                
+                    <button id="btnLogin" type="submit" class="login" >Login</button>
+                
+                <div class="sign">
+                     <a href="./sign.html">Registrate aquí</a>
+               </div>
+                
+            </div>
+        </form>
     </section>
-    <script src="./js/val.js" ></script>
+    <!--<script src="./js/val.js" ></script>-->
     
 </body>
 </html>
