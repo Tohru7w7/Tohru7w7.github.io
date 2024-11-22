@@ -46,10 +46,28 @@ section>div>input{
     margin-top: 10px;
 }
 #txtNC{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+#user{
+    border-radius: 130px;
     margin-left: 130px;
     margin-top: 10px;
-    font-size: 50px;
-    font-family: Campana;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 9;
+    color: rgb(0, 0, 0);
+}
+#pass{
+    display: flex;
+    justify-content: center;
+    border-radius: 130px;
+    margin-left: 130px;
+    margin-top: 10px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 9;
     color: rgb(0, 0, 0);
 }
