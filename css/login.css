@@ -26,7 +26,7 @@ img#image1{
     margin-left: 74px;
 }
 img#icono{
-    margin-left: 0;
+    margin-left: 10px;
     margin-top: 30px;
     width: 30%;
     height: 6%;
@@ -46,14 +46,13 @@ section>div>input{
     margin-top: 10px;
 }
 #txtNC{
-    display: flex;
-    justify-content: center;
+    margin-left: 10px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
 }
 #user{
     border-radius: 130px;
-    margin-left: 130px;
+    margin-left: 80px;
     margin-top: 10px;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
@@ -64,7 +63,7 @@ section>div>input{
     display: flex;
     justify-content: center;
     border-radius: 130px;
-    margin-left: 130px;
+    margin-left: 80px;
     margin-top: 10px;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
@@ -85,7 +84,7 @@ section>div>input{
     height: 40px;
     width: 250px;
     margin-top: 25px;
-    margin-left: 250px;
+    margin-left: 200px;
     background-color: #B5D8EB;
     border: none;
     color: rgb(0, 0, 0);
@@ -104,6 +103,7 @@ section>div>input{
     font-size: 25px;
     color: rgb(0, 0, 0);
     text-decoration: none;
+    margin-left: 70px;
 }
 .sign>p{
     margin-right: 5px;
