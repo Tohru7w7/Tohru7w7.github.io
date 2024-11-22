@@ -20,9 +20,9 @@
       </h2>
       <ul class="nav flex-column">
         <li class="nav-item h5 mx-2"><a href="./dashboard.html" class="nav-link text-white"><i class="bi bi-house px-2"></i>Home</a></li>
-        <li class="nav-item h5 mx-2"><a href="./dietas.html" class="nav-link text-white"><i class="bi bi-flower3"></i>Product</a></li>
+        <li class="nav-item h5 mx-2"><a href="./dietas.html" class="nav-link text-white"><i class="bi bi-heart-fill"></i>Products</a></li>
         <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i class="bi bi-people px-2"></i>User</a></li>
-        <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i class="bi bi-people px-2"></i>Proveedores</a></li>
+        <li class="nav-item h5 mx-2"><a href="./provee.html" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
       </ul>
     </aside>
     <!--end sidebbar-->
@@ -132,6 +132,80 @@
       </div>
       <!--end charts-->
     </main>
+  </div>
+  <div class="modal fade modal-lg" id="modal1Add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="" class="needs-validation" novalidate id="form">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6 mb-2">
+                <label for="">Nombre:</label>
+                <input required type="text" class="form-control" placeholder="Inserta el nombre">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+              <div class="col-6 mb-2">
+                <label for="">Apellido:</label>
+                <input required type="text" class="form-control" placeholder="Inserta el apellido">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4 mb-2">
+                <label for="">Edad</label>
+                <input required min="1" type="number" class="form-control" placeholder="Inserta la edad">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+              <div class="col-4 mb-2">
+                <label for="">Peso</label>
+                <input required min="1" type="number" class="form-control" placeholder="Inserta el peso">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+              <div class="col-4 mb-2">
+                <label for="">Estatura</label>
+                <input required min="1" type="number" class="form-control" placeholder="Inserta la estatura">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-15 mb-2">
+                <label for="">Email:</label>
+                <input required min="1" type="email" class="form-control" placeholder="Insertar el email">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 mb-2">
+                <label for="">Password:</label>
+                <input required type="password" class="form-control" placeholder="Insertar la contraseña">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+              <div class="col-6 mb-2">
+                <label for="">Confirmar Password:</label>
+                <input required type="password" class="form-control" placeholder="Confirmar contraseña">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" id="btnSave">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 
 
