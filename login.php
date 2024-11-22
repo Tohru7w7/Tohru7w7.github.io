@@ -1,3 +1,9 @@
+<?php
+    if(isset($_GET['error'])){
+        $error =$_GET['error'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,6 +19,7 @@
             <img id="image1" src="./img/image1.png" alt="">
             
         </div class="section">
+
         <form action="./php/login.php" method="POST" >
             <div id="phone" action="" >
                 <img id="icono" src="./img/icono3.png" alt="">
@@ -31,7 +38,40 @@
             </div>
         </form>
     </section>
-    <!--<script src="./js/val.js" ></script>-->
     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <?php
+        if(isset($error)){
+    ?>
+    <script>
+        Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Credenciales incorrectas!"
+        });
+    </script>
+    <?php } ?>
+
 </body>
 </html>
+
+    <!--<script src="./js/val.js" ></script>-->
+   <!-- CREATE DATABASE mramor;
+
+USE mramor;
+
+-- Tabla users (Usuarios)
+CREATE TABLE users (
+    id INTEGER not null auto_increment,
+    name VARCHAR(50),
+    email VARCHAR(100),
+    password VARCHAR(255),
+    level TINYINT,
+    primary key (id)
+);
+
+insert into users values (0,'Joselin Cera','joselin@mail.com','1234567',1);
+
+select * from users where email='joselin@mail.com'and password ='1234567';-->
+<!--<script src="./js/users.js"></script>-->
+    

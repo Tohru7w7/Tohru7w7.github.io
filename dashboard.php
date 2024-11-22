@@ -1,3 +1,11 @@
+<?php session_start();
+if(isset($_SESSION['userdata'])){
+  $user=$_SESSION['userdata'];
+}else{
+  header("Location: ./login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +63,9 @@
                 <li class="nav-item dropdown mx-4">
                   <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Cinnamoroll
+                    <?php
+                    echo $user['Nombre'];
+                    ?>
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Perfil</a></li>
