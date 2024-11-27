@@ -13,5 +13,20 @@ CREATE TABLE users (
 );
 
 insert into users values (0,'Joselin Cera','joselin@mail.com','1234567',1);
-insert into users values (0,'Bryan Palma','´palma@mail.com','1234567',0);
+insert into users values (0,'Bryan Palma','palma@mail.com','1234567',0);
 select * from users where email='joselin@mail.com'and password ='1234567';
+select * from users order by id
+
+create table proveedores(
+id INTEGER not null auto_increment,
+nombre VARCHAR(30),
+telefono varchar(20),
+producto varchar(30),
+cantidad numeric,
+pago INT,
+fecha_pedido DATE,
+primary key(id)
+)
+drop table proveedores
+select * from proveedores
+insert into proveedores values(0,'Juan Duran','636-123-4567','SERUM','40',3000,'2024/2/27')

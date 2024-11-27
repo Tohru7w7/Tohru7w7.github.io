@@ -1,3 +1,9 @@
+<?php
+include "./php/conexion.php";
+$sql="select * from users order by id";
+$res=$conexion->query($sql) or die($conexion->error);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +29,7 @@
         <li class="nav-item h5 mx-2"><a href="./dashboard.html" class="nav-link text-white"><i
               class="bi bi-house px-2"></i>Home</a></li>
         <li class="nav-item h5 mx-2"><a href="./dietas.html" class="nav-link text-white"><i class="bi bi-heart-fill"></i></i>Products</a></li>
-        <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i
+        <li class="nav-item h5 mx-2"><a href="./provee.html" class="nav-link text-white"><i
               class="bi bi-people px-2"></i>User</a></li>
         <li class="nav-item h5 mx-2"><a href="./provee.html" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
       </ul>
@@ -76,7 +82,7 @@
       <!--end header-->
       <!--title section-->
       <div class="mx-4 d-flex justify-content-between">
-        <h1 class="h4">Proveedores</h1>
+        <h1 class="h4">Usuarios</h1>
         <div>
           <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal1Add">Agregar</button>
         </div>
@@ -86,25 +92,28 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">ID</th>
-              <th scope="col">NOMBRE</th>
-              <th scope="col">TELEFONO</th>
-              <th scope="col">PRODUCTO</th>
-              <th scope="col">CANTIDAD</th>
-              <th scope="col">PAGO</th>
-              <th scope="col">FECHA</th>
+              <th scope="col">id</th>
+              <th scope="col">name</th>
+              <th scope="col">email</th>
+              <th scope="col">password</th>
+              <th scope="col">nivel</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
+            <?php
+            while($fila=mysqli_fetch_array($res)){
+            ?>
             <tr>
-              <td>1</td>
-              <td>Fernando</td>
-              <td>636-120-1223</td>
-              <td>SERUM</td>
-              <td>50</td>
-              <td>$3,000.00</td>
-              <td>21/11/2024</td>
+              <td><?php echo $fila['id'] ?></td>
+              <td><?php echo $fila['name'] ?></td>
+              <td><?php echo $fila['email'] ?></td>
+              <td>***********</td>
+              <td><?php if($fila['level']==0){
+                echo "<span class='rounded bg-success text-white p-1'>Administrador</span>";
+              }else{
+                echo "<span class='rounded bg-dark text-white p-1'>Usuario</span>";
+              } ?></td>
               <td class="text-end">
                 <button class="btn btn-outline-danger btn-sm">
                   <i class="bi bi-trash"></i>
@@ -117,6 +126,9 @@
                 </button>
               </td>
             </tr>
+            <?php
+            }
+            ?>
           </tbody>
         </table>
       </section>
@@ -142,50 +154,31 @@
             </div>
             <div class="row">
               <div class="col-15 mb-2">
-                <label for="">Telefono:</label>
-                <input type="tel" class="form-control" placeholder="Insertar el telefono">
+                <label for="">Email:</label>
+                <input required min="1" type="email" class="form-control" placeholder="Insertar el email">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
-              </div>
-            </div>
-            <div class="col-15 mb-2">
-                <label for="">Producto:</label>
-                <input type="number" class="form-control" placeholder="Insertar el id del producto">
-                <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Datos invalidos</div>
-              </div>
-              <div class="row">
-                <div class="col-15 mb-2">
-                  <label for="">Cantidad de productos:</label>
-                  <input required min="1" required type="number" class="form-control" placeholder="Insertar la cantidad">
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Datos invalidos</div>
-                </div>
-                <div class="col-15 mb-2">
-                  <label for="">Cuanto debe pagarse:</label>
-                  <input required min="1" required type="number" class="form-control" placeholder="Confirmar contraseña">
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Datos invalidos</div>
-                </div>
               </div>
             </div>
             <div class="row">
-                <div class="col-15 mb-2">
-                  <label for="">Fecha del pedido:</label>
-                  <input type="date" class="form-control" placeholder="Insertar la fecha">
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Datos invalidos</div>
-                </div>
+              <div class="col-6 mb-2">
+                <label for="">Password:</label>
+                <input required type="password" class="form-control" placeholder="Insertar la contraseña">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
               </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-dark" id="btnSave">Save</button>
+              <div class="col-6 mb-2">
+                <label for="">Confirmar Password:</label>
+                <input required type="password" class="form-control" placeholder="Confirmar contraseña">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
               </div>
             </div>
-            
-            
-            
-          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" id="btnSave">Save</button>
+          </div>
         </form>
       </div>
     </div>
