@@ -1,3 +1,9 @@
+<?php
+include "./php/conexion.php";
+$sql="select * from users order by id";
+$res=$conexion->query($sql) or die($conexion->error);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,10 +28,10 @@
       <ul class="nav flex-column">
         <li class="nav-item h5 mx-2"><a href="./dashboard.php" class="nav-link text-white"><i
               class="bi bi-house px-2"></i>Home</a></li>
-        <li class="nav-item h5 mx-2"><a href="./dietas.html" class="nav-link text-white"><i class="bi bi-heart-fill"></i></i>Products</a></li>
-        <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i
+        <li class="nav-item h5 mx-2"><a href="./dietas.php" class="nav-link text-white"><i class="bi bi-heart-fill"></i></i>Products</a></li>
+        <li class="nav-item h5 mx-2"><a href="./users.php" class="nav-link text-white"><i
               class="bi bi-people px-2"></i>User</a></li>
-              <li class="nav-item h5 mx-2"><a href="./provee.html" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
+              <li class="nav-item h5 mx-2"><a href="./provee.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
       </ul>
     </aside>
     <!--end sidebbar-->
@@ -182,21 +188,27 @@
             <div class="row">
               <div class="col-6 mb-2">
                 <label for="">Nombre del producto:</label>
-                <input required type="text" class="form-control" placeholder="Inserta el nombre">
+                <input name="txtname" required type="text" class="form-control" placeholder="Inserta el nombre">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
               <div class="col-6 mb-2">
                 <label for="">Precio:</label>
-                <input required type="number" required min=1 class="form-control" placeholder="Inserta el precio">
+                <input name="txtprice" required type="number" required min=1 class="form-control" placeholder="Inserta el precio">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+              <div class="col-6 mb-2">
+                <label for="">Imagen:</label>
+                <input name="image" required type="file" class="form-control" placeholder="Inserta la imagen">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
             </div>
             <div class="row">
               <div class="col-12 mb-2">
-                <label for="">Tipo:</label>
-                <input  type="text" class="form-control" placeholder="Inserta el tipo de maquillaje">
+                <label for="">Categoria:</label>
+                <input  name="txttipe" type="text" class="form-control" placeholder="Inserta el tipo de maquillaje">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>

@@ -104,7 +104,19 @@ pago INT,
 fecha_pedido DATE,
 primary key(id)
 )
-drop table proveedores
+drop table productos
 select * from proveedores
-insert into proveedores values(0,'Juan Duran','636-123-4567','SERUM','40',3000,'2024/2/27')-->
+insert into proveedores values(0,'Juan Duran','636-123-4567','SERUM','40',3000,'2024/2/27')
+
+create table productos(
+id INTEGER not null auto_increment,
+name varchar(30),
+price double,
+img varchar(30),
+idCategoria Integer,
+primary key(id)
+)
+select * from productos
+
+insert into productos values (0,'Serum',250.00,'img5.jpg',1)-->
     

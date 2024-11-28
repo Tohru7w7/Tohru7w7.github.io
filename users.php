@@ -26,12 +26,12 @@ $res=$conexion->query($sql) or die($conexion->error);
         MrAmor
       </h2>
       <ul class="nav flex-column">
-        <li class="nav-item h5 mx-2"><a href="./dashboard.html" class="nav-link text-white"><i
+        <li class="nav-item h5 mx-2"><a href="./dashboard.php" class="nav-link text-white"><i
               class="bi bi-house px-2"></i>Home</a></li>
-        <li class="nav-item h5 mx-2"><a href="./dietas.html" class="nav-link text-white"><i class="bi bi-heart-fill"></i></i>Products</a></li>
-        <li class="nav-item h5 mx-2"><a href="./provee.html" class="nav-link text-white"><i
+        <li class="nav-item h5 mx-2"><a href="./dietas.php" class="nav-link text-white"><i class="bi bi-heart-fill"></i></i>Products</a></li>
+        <li class="nav-item h5 mx-2"><a href="./provee.php" class="nav-link text-white"><i
               class="bi bi-people px-2"></i>User</a></li>
-        <li class="nav-item h5 mx-2"><a href="./provee.html" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
+        <li class="nav-item h5 mx-2"><a href="./provee.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
       </ul>
     </aside>
     <!--end sidebbar-->
