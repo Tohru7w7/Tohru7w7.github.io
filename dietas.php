@@ -1,9 +1,9 @@
-<?php
-include "./php/conexion.php";
-$sql="select * from users order by id";
-$res=$conexion->query($sql) or die($conexion->error);
-
-?>
+<?php session_start();
+if(isset($_SESSION['userdata'])){
+  $user=$_SESSION['userdata'];
+}else{
+  header("Location: ./login.php");
+}?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,65 +20,16 @@ $res=$conexion->query($sql) or die($conexion->error);
 <body>
   <div class="d-flex">
     <!--sidebbar-->
-    <aside class="bg-dark text-white vh-300" style="width: 20%;">
-      <h2 class="p-4 h4">
-        <img width="50px" src="./img/nogordas.png" alt="" class="mx-1" style="font-family: 'Times New Roman', Times, serif;">
-        MrAmor
-      </h2>
-      <ul class="nav flex-column">
-        <li class="nav-item h5 mx-2"><a href="./dashboard.php" class="nav-link text-white"><i
-              class="bi bi-house px-2"></i>Home</a></li>
-        <li class="nav-item h5 mx-2"><a href="./dietas.php" class="nav-link text-white"><i class="bi bi-heart-fill"></i></i>Products</a></li>
-        <li class="nav-item h5 mx-2"><a href="./users.php" class="nav-link text-white"><i
-              class="bi bi-people px-2"></i>User</a></li>
-              <li class="nav-item h5 mx-2"><a href="./provee.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
-      </ul>
-    </aside>
+    <?php
+      include "./layouts/aside.php"
+    ?>
     <!--end sidebbar-->
 
     <main class="flex-grow-1">
       <!--hedear-->
-      <header>
-        <nav class="px-4 py-4 navbar navbar-expand-lg bg-body-tertiary px-4">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Dashboard</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item mx-4">
-                  <button type="button" class="btn btn-light position-relative">
-                    <i class="bi bi-bell"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      20
-                      <span class="visually-hidden">unread messages</span>
-                    </span>
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <img src="./img/profile.jpg" style="width: 40px;border-radius: 50%; border: 1px solid black;">
-                </li>
-                <li class="nav-item dropdown mx-4">
-                  <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Cinnamoroll
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Log Out</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <?php
+      include "./layouts/header.php"
+    ?>
       <!--end header-->
       <!--title section-->
       <div class="mx-4 d-flex justify-content-between">
@@ -97,6 +48,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                       <h5 class="card-title">Snack</h5>
                       <p class="card-text">Un snack de yogurd natural, agregando frutas saludables para dar un extra al snack</p>
                       <a href="#" class="btn btn-dark">Go somewhere</a>
+                      <button class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i>
+                </button>
                     </div>
                   </div>
             </div>
@@ -107,6 +61,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                       <h5 class="card-title">Pasta</h5>
                       <p class="card-text">Una pasta con crema, agregando espinacas y tomate para algo balanceado</p>
                       <a href="#" class="btn btn-dark">Go somewhere</a>
+                      <button class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i>
+                </button>
                     </div>
                   </div>
             </div>
@@ -117,6 +74,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                       <h5 class="card-title">Sopa de Dumplings</h5>
                       <p class="card-text">uejjfhjhjhjefhjhjeheffiuwhgvuiwehbuijngijgjitgjiggijgjigjgjirtgerhsnrnhjksenhjes</p>
                       <a href="#" class="btn btn-dark">Go somewhere</a>
+                      <button class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i>
+                </button>
                     </div>
                   </div>
             </div>
@@ -127,6 +87,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                       <h5 class="card-title">Snack</h5>
                       <p class="card-text">Un snack de yogurd natural, agregando frutas saludables para dar un extra al snack</p>
                       <a href="#" class="btn btn-dark">Go somewhere</a>
+                      <button class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i>
+                </button>
                     </div>
                   </div>
             </div>
@@ -137,6 +100,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                       <h5 class="card-title">Snack</h5>
                       <p class="card-text">Un snack de yogurd natural, agregando frutas saludables para dar un extra al snack</p>
                       <a href="#" class="btn btn-dark">Go somewhere</a>
+                      <button class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i>
+                </button>
                     </div>
                   </div>
             </div>
@@ -147,6 +113,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                     <h5 class="card-title">Snack</h5>
                     <p class="card-text">Un snack de yogurd natural, agregando frutas saludables para dar un extra al snack</p>
                     <a href="#" class="btn btn-dark">Go somewhere</a>
+                    <button class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i>
+                </button>
                   </div>
                 </div>
           </div>
@@ -157,6 +126,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                     <h5 class="card-title">Snack</h5>
                     <p class="card-text">Un snack de yogurd natural, agregando frutas saludables para dar un extra al snack</p>
                     <a href="#" class="btn btn-dark">Go somewhere</a>
+                    <button class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i>
+                </button>
                   </div>
                 </div>
           </div>
@@ -167,6 +139,9 @@ $res=$conexion->query($sql) or die($conexion->error);
                   <h5 class="card-title">Snack</h5>
                   <p class="card-text">Un snack de yogurd natural, agregando frutas saludables para dar un extra al snack</p>
                   <a href="#" class="btn btn-dark">Go somewhere</a>
+                  <button class="btn btn-outline-danger btn-sm ">
+                  <i class="bi bi-trash"></i>
+                </button>
                 </div>
               </div>
         </div>
@@ -183,7 +158,7 @@ $res=$conexion->query($sql) or die($conexion->error);
           <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Producto</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="" class="needs-validation" novalidate id="form">
+        <form action="./php/product-add.php" method="post" enctype="multipart/form-data" class="needs-validation" novalidate id="form">
           <div class="modal-body">
             <div class="row">
               <div class="col-6 mb-2">
@@ -194,13 +169,13 @@ $res=$conexion->query($sql) or die($conexion->error);
               </div>
               <div class="col-6 mb-2">
                 <label for="">Precio:</label>
-                <input name="txtprice" required type="number" required min=1 class="form-control" placeholder="Inserta el precio">
+                <input name="txtprice" required type="decimal" required min=1 class="form-control" placeholder="Inserta el precio">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
               <div class="col-6 mb-2">
                 <label for="">Imagen:</label>
-                <input name="image" required type="file" class="form-control" placeholder="Inserta la imagen">
+                <input name="txtfile" required type="file" class="form-control" placeholder="Inserta la imagen">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
@@ -208,10 +183,23 @@ $res=$conexion->query($sql) or die($conexion->error);
             <div class="row">
               <div class="col-12 mb-2">
                 <label for="">Categoria:</label>
-                <input  name="txttipe" type="text" class="form-control" placeholder="Inserta el tipo de maquillaje">
+                <input  name="txtcat" type="text" class="form-control" placeholder="Inserta el tipo de maquillaje">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
+              <div class="row">
+              <div class="col-12 mb-2">
+                <label for="">Descripción:</label>
+                <input  name="txtdes" type="text" class="form-control" placeholder="Inserta el tipo de maquillaje">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+              <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" id="btnSave2">Save</button>
+          </div>
+        </from>
+
   
 
 
