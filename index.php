@@ -29,7 +29,7 @@
     </header>
     <nav id="menu">
         <ul>
-            <li>Inicio</li>
+            <a href="./dash-user.php"><li>Inicio</li></a>
             <li>Rostro</li>
             <li>Ojos</li>
             <li>Labios</li>
