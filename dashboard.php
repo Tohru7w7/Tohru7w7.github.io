@@ -1,3 +1,10 @@
+<?php session_start();
+if(isset($_SESSION['userdata'])){
+  $user=$_SESSION['userdata'];
+}else{
+  header("Location: ./login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,63 +20,16 @@
 <body>
   <div class="d-flex">
     <!--sidebbar-->
-    <aside class="bg-dark text-white vh-100" style="width: 20%;">
-      <h2 class="p-4 h4">
-        <img width="50px" src="./img/nogordas.png" alt="" class="mx-1">
-        Dietas
-      </h2>
-      <ul class="nav flex-column">
-        <li class="nav-item h5 mx-2"><a href="./dashboard.html" class="nav-link text-white"><i class="bi bi-house px-2"></i>Home</a></li>
-        <li class="nav-item h5 mx-2"><a href="./dietas.html" class="nav-link text-white"><i class="bi bi-heart-fill"></i>Products</a></li>
-        <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i class="bi bi-people px-2"></i>User</a></li>
-        <li class="nav-item h5 mx-2"><a href="./provee.html" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
-      </ul>
-    </aside>
+    <?php
+      include "./layouts/aside.php"
+    ?>
     <!--end sidebbar-->
 
     <main class="flex-grow-1">
       <!--hedear-->
-      <header>
-        <nav class="px-4 py-4 navbar navbar-expand-lg bg-body-tertiary px-4">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">MrAmor</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item mx-4">
-                  <button type="button" class="btn btn-light position-relative">
-                    <i class="bi bi-bell"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      20
-                      <span class="visually-hidden">unread messages</span>
-                    </span>
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <img src="./img/profile.jpg" style="width: 40px;border-radius: 50%; border: 1px solid black;">
-                </li>
-                <li class="nav-item dropdown mx-4">
-                  <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Cinnamoroll
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Log Out</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <?php
+      include "./layouts/header.php"
+    ?>
       <!--end hedear-->
       <!--row stats-->
       <div class="row mx-4 px-4 my-4">
