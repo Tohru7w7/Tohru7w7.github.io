@@ -4,9 +4,7 @@
         MrAmor
       </h2>
       <ul class="nav flex-column">
-        <li class="nav-item h5 mx-2"><a href="./dashboard.php" class="nav-link text-white"><i class="bi bi-house px-2"></i>Home</a></li>
-        <li class="nav-item h5 mx-2"><a href="./dietas.php" class="nav-link text-white"><i class="bi bi-heart-fill"></i>Products</a></li>
-        <li class="nav-item h5 mx-2"><a href="./users.php" class="nav-link text-white"><i class="bi bi-people px-2"></i>User</a></li>
-        <li class="nav-item h5 mx-2"><a href="./provee.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Proveedores</a></li>
-      </ul>
+        <li class="nav-item h5 mx-2"><a href="./index.php" class="nav-link text-white"><i class="bi bi-house px-2"></i>Home</a></li>
+        <li class="nav-item h5 mx-2"><a href="./dietas-user.php" class="nav-link text-white"><i class="bi bi-heart-fill"></i>Todo</a></li>
+        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Labios</a></li>
     </aside>

@@ -1,9 +1,5 @@
 <?php session_start();
-if(isset($_SESSION['userdata'])){
-  $user=$_SESSION['userdata'];
-}else{
-  header("Location: ./login.php");
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +24,7 @@ if(isset($_SESSION['userdata'])){
     <main class="flex-grow-1">
       <!--hedear-->
       <?php
-      include "./layouts/header.php"
+      include "./layouts/header-user.php"
     ?>
       <!--end hedear-->
       <!--row stats-->
