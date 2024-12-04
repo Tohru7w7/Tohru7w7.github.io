@@ -51,27 +51,7 @@
 </body>
 </html>
 
-    <!--<script src="./js/val.js" ></script>-->
-   <!-- CREATE DATABASE mramor;
-
-USE mramor;
-
--- Tabla users (Usuarios)
-CREATE TABLE users (
-    id INTEGER not null auto_increment,
-    name VARCHAR(50),
-    email VARCHAR(100),
-    password VARCHAR(255),
-    level TINYINT,
-    primary key (id)
-);
-
-insert into users values (0,'Joselin Cera','joselin@mail.com','1234567',1);
-
-select * from users where email='joselin@mail.com'and password ='1234567';-->
-<!--<script src="./js/users.js"></script>
-
-CREATE DATABASE mramor;
+    <!--CREATE DATABASE mramor;
 
 USE mramor;
 
@@ -110,9 +90,10 @@ name varchar(30),
 price double,
 img varchar(30),
 idCategoria Integer,
+des varchar(100),
 primary key(id)
 )
 select * from productos
 
-insert into productos values (0,'Serum',250.00,'img5.jpg',1)-->
+insert into productos values (0,'Serum',250.00,'img5.jpg',1,'bhsbhdas')-->
     
