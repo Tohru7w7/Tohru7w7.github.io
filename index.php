@@ -29,11 +29,11 @@
     </header>
     <nav id="menu">
         <ul>
-            <a href="./dash-user.php" ><li class="temas" >Inicio</li></a>
-            <a href="./dash-user.php" ><li class="temas" >Rostro</li></a>
-            <a href="./dash-user.php" ><li class="temas" >Ojos</li></a>
-            <a href="./dash-user.php" ><li class="temas" >Labios</li></a>
-            <a href="./dash-user.php" ><li class="temas" >Cuidado Personal</li></a>
+            <li class="temas" >Inicio</li>
+            <li class="temas" >Rostro</li>
+            <li class="temas" >Ojos</li>
+            <li class="temas" >Labios</li>
+            <li class="temas" >Cuidado Personal</li>
         </ul>
     </nav>
     <section>

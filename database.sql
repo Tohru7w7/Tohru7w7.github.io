@@ -37,8 +37,9 @@ name varchar(30),
 price double,
 img varchar(30),
 idCategoria Integer,
+des varchar(100),
 primary key(id)
 )
 select * from productos
 
-insert into productos values (0,'Serum',250.00,'img5.jpg',1)
+insert into productos values (0,'Serum',250.00,'img5.jpg',1,'bhsbhdas')

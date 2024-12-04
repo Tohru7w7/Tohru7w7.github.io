@@ -1,14 +1,4 @@
-<?php
-    if(isset($_GET['error'])){
-        $error =$_GET['error'];
-    }
-?>
-<?php session_start();
-if(isset($_SESSION['userdata'])){
-  $user=$_SESSION['userdata'];
-}else{
-  header("Location: ./login.php");
-}?>
+
 
 <!DOCTYPE html>
 <html lang="es">

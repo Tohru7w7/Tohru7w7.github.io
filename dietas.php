@@ -175,7 +175,7 @@ if(isset($_SESSION['userdata'])){
               </div>
               <div class="col-6 mb-2">
                 <label for="">Imagen:</label>
-                <input name="txtfile" required type="file" class="form-control" placeholder="Inserta la imagen">
+                <input accept="image/*" name="txtfile" required type="file" class="form-control" placeholder="Inserta la imagen">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
@@ -184,6 +184,7 @@ if(isset($_SESSION['userdata'])){
               <div class="col-12 mb-2">
                 <label for="">Categoria:</label>
                 <input  name="txtcat" type="text" class="form-control" placeholder="Inserta el tipo de maquillaje">
+                <select name="txtcat" class='form-control' id=""></select>
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
