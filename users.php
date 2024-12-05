@@ -75,7 +75,11 @@ if(isset($_SESSION['userdata'])){
                 <button class="btn btn-outline-danger btn-sm">
                   <i class="bi bi-trash"></i>
                 </button>
-                <button class="btn btn-outline-warning btn-sm mx-2">
+                <button class="btn btn-outline-warning btn-sm mx-2 btnEdit" 
+                data-email="<?php echo $fila['email']; ?>"
+                data-id="<?php echo $fila['id'] ?>"
+                data-name="<?php echo $fila['name'] ?>"
+                data-bs-toggle="modal" data-bs-target="#modalEdit">
                   <i class="bi bi-pen"></i>
                 </button>
                 <button class="btn btn-outline-dark btn-sm">
@@ -99,7 +103,7 @@ if(isset($_SESSION['userdata'])){
           <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="" class="needs-validation" novalidate id="form">
+        <form action="" class="needs-validation" novalidate id="form" method="post">
           <div class="modal-body">
             <div class="row">
               <div class="col-15 mb-2">
@@ -141,12 +145,77 @@ if(isset($_SESSION['userdata'])){
     </div>
   </div>
 
+  <!-- Modal Edit-->
+  <div class="modal fade modal-lg" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="./php/user_update.php" class="needs-validation" novalidate id="formEdit" method="post">
+          <div class="modal-body">
+            <input type="hidden"  id="txtIdEdit" name="txtId">
+            <input type="hidden"  id="txtLevelEdit" name="txtLevel">
+            <div class="row">
+              <div class="col-15 mb-2">
+                <label for="">Nombre:</label>
+                <input id="txtNameEdit" name="txtName" type="text" class="form-control" placeholder="Insertar el nombre">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-15 mb-2">
+                <label for="">Email:</label>
+                <input id="txtEmailEdit" name="txtEmail" required min="1" type="email" class="form-control" placeholder="Insertar el email">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" id="btnEdit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
   <script src="./js/users.js"></script>
+
+
+  <?php
+    if(isset($_GET['status'])){
+      if($_GET['status']==1){
+        ?>
+        <script>
+        const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Datos Guardados"
+      });
+        </script>
+        <?php
+      }
+    }
+  ?>
 </body>
 </body>
 
