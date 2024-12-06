@@ -103,12 +103,12 @@ if(isset($_SESSION['userdata'])){
           <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="" class="needs-validation" novalidate id="form" method="post">
+        <form action="./php/user_add.php" class="needs-validation" novalidate id="form" method="post">
           <div class="modal-body">
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Nombre:</label>
-                <input type="text" class="form-control" placeholder="Insertar el nombre">
+                <input name="txtName" type="text" class="form-control" placeholder="Insertar el nombre">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
@@ -116,7 +116,7 @@ if(isset($_SESSION['userdata'])){
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Email:</label>
-                <input required min="1" type="email" class="form-control" placeholder="Insertar el email">
+                <input name="txtEmail" required min="1" type="email" class="form-control" placeholder="Insertar el email">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
@@ -124,13 +124,13 @@ if(isset($_SESSION['userdata'])){
             <div class="row">
               <div class="col-6 mb-2">
                 <label for="">Password:</label>
-                <input required type="password" class="form-control" placeholder="Insertar la contraseña">
-                <div class="valid-feedback">Looks good!</div>
+                <input name="txtPass" required type="password" class="form-control" placeholder="Insertar la contraseña">
+                <div  class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
               <div class="col-6 mb-2">
                 <label for="">Confirmar Password:</label>
-                <input required type="password" class="form-control" placeholder="Confirmar contraseña">
+                <input name="txtPass2" required type="password" class="form-control" placeholder="Confirmar contraseña">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>

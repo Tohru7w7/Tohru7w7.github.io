@@ -98,12 +98,12 @@ if(isset($_SESSION['userdata'])){
           <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="" class="needs-validation" novalidate id="form">
+        <form action="./php/provee_add.php" class="needs-validation" novalidate id="form" method="post">
           <div class="modal-body">
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Nombre:</label>
-                <input type="text" class="form-control" placeholder="Insertar el nombre">
+                <input name="txtName" type="text" class="form-control" placeholder="Insertar el nombre">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
@@ -111,27 +111,27 @@ if(isset($_SESSION['userdata'])){
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Telefono:</label>
-                <input type="tel" class="form-control" placeholder="Insertar el telefono">
+                <input name="txtTel" type="tel" class="form-control" placeholder="Insertar el telefono">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
             </div>
             <div class="col-15 mb-2">
                 <label for="">Producto:</label>
-                <input type="number" class="form-control" placeholder="Insertar el id del producto">
+                <input name="txtProduct" type="number" class="form-control" placeholder="Insertar el id del producto">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
               <div class="row">
                 <div class="col-15 mb-2">
                   <label for="">Cantidad de productos:</label>
-                  <input required min="1" required type="number" class="form-control" placeholder="Insertar la cantidad">
+                  <input name="txtCantProd" required min="1" required type="number" class="form-control" placeholder="Insertar la cantidad">
                   <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Datos invalidos</div>
                 </div>
                 <div class="col-15 mb-2">
                   <label for="">Cuanto debe pagarse:</label>
-                  <input required min="1" required type="number" class="form-control" placeholder="Confirmar contraseña">
+                  <input name="txtHM" required min="1" required type="number" class="form-control" placeholder="Confirmar contraseña">
                   <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Datos invalidos</div>
                 </div>
@@ -140,7 +140,7 @@ if(isset($_SESSION['userdata'])){
             <div class="row">
                 <div class="col-15 mb-2">
                   <label for="">Fecha del pedido:</label>
-                  <input type="date" class="form-control" placeholder="Insertar la fecha">
+                  <input name="txtDate" type="date" class="form-control" placeholder="Insertar la fecha">
                   <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Datos invalidos</div>
                 </div>
