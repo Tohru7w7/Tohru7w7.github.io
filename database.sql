@@ -13,6 +13,7 @@ CREATE TABLE users (
 );
 
 insert into users values (0,'Joselin Cera','joselin@mail.com','1234567',1);
+insert into users values (0,'Juan','juan@mail.com','1234',1);
 insert into users values (0,'Bryan Palma','palma@mail.com','1234567',0);
 select * from users where email='joselin@mail.com'and password ='1234567';
 select * from users order by id

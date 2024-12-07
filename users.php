@@ -72,9 +72,13 @@ if(isset($_SESSION['userdata'])){
                 echo "<span class='rounded bg-dark text-white p-1'>Usuario</span>";
               } ?></td>
               <td class="text-end">
-                <button class="btn btn-outline-danger btn-sm">
+                <form action="./php/delete_user.php" method="post" style="display:inline">
+                <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
+                  <button trpe="submit" class="btn btn-outline-danger btn-sm" 
+                  onclick="return confirm('Estas seguro de borrarlo?')">
                   <i class="bi bi-trash"></i>
                 </button>
+              </form>
                 <button class="btn btn-outline-warning btn-sm mx-2 btnEdit" 
                 data-email="<?php echo $fila['email']; ?>"
                 data-id="<?php echo $fila['id'] ?>"
