@@ -71,10 +71,22 @@ if(isset($_SESSION['userdata'])){
               <td><?php echo $fila['pago'] ?></td>
               <td><?php echo $fila['fecha_pedido'] ?></td>
               <td class="text-end">
-                <button class="btn btn-outline-danger btn-sm">
+              <form action="./php/delete_provee.php" method="post" style="display:inline">
+                <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
+                  <button trpe="submit" class="btn btn-outline-danger btn-sm" 
+                  onclick="return confirm('Estas seguro de borrarlo?')">
                   <i class="bi bi-trash"></i>
                 </button>
-                <button class="btn btn-outline-warning btn-sm mx-2">
+              </form>
+              <button class="btn btn-outline-warning btn-sm mx-2 btnEdit" 
+                data-name="<?php echo $fila['nombre']; ?>"
+                data-id="<?php echo $fila['id'] ?>"
+                data-phone="<?php echo $fila['telefono'] ?>"
+                data-prod="<?php echo $fila['producto'] ?>"
+                data-cant="<?php echo $fila['cantidad'] ?>"
+                data-pago="<?php echo $fila['pago'] ?>"
+                data-fecha="<?php echo $fila['fecha_pedido'] ?>"
+                data-bs-toggle="modal" data-bs-target="#modalEdit">
                   <i class="bi bi-pen"></i>
                 </button>
                 <button class="btn btn-outline-dark btn-sm">
@@ -95,11 +107,12 @@ if(isset($_SESSION['userdata'])){
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Proveedor</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form action="./php/provee_add.php" class="needs-validation" novalidate id="form" method="post">
           <div class="modal-body">
+          <input type="hidden"  id="txtIdEdit" name="txtId">
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Nombre:</label>
@@ -158,6 +171,101 @@ if(isset($_SESSION['userdata'])){
       </div>
     </div>
   </div>
+  <!-- Modal Edit -->
+  <div class="modal fade modal-lg" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Proveedor</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="./php/provee_add.php" class="needs-validation" novalidate id="form" method="post">
+          <div class="modal-body">
+          <input type="hidden"  id="txtIdEdit" name="txtId">
+            <div class="row">
+              <div class="col-15 mb-2">
+                <label for="">Nombre:</label>
+                <input name="txtNameEdit" type="text" class="form-control" placeholder="Insertar el nombre">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-15 mb-2">
+                <label for="">Telefono:</label>
+                <input name="txtTelEdit" type="tel" class="form-control" placeholder="Insertar el telefono">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+            </div>
+            <div class="col-15 mb-2">
+                <label for="">Producto:</label>
+                <input name="txtProductEdit" type="number" class="form-control" placeholder="Insertar el id del producto">
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Datos invalidos</div>
+              </div>
+              <div class="row">
+                <div class="col-15 mb-2">
+                  <label for="">Cantidad de productos:</label>
+                  <input name="txtCantProdEdit" required min="1" required type="number" class="form-control" placeholder="Insertar la cantidad">
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Datos invalidos</div>
+                </div>
+                <div class="col-15 mb-2">
+                  <label for="">Cuanto debe pagarse:</label>
+                  <input name="txtHMEdit" required min="1" required type="number" class="form-control" placeholder="Confirmar contraseña">
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Datos invalidos</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-15 mb-2">
+                  <label for="">Fecha del pedido:</label>
+                  <input name="txtDateEdit" type="date" class="form-control" placeholder="Insertar la fecha">
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Datos invalidos</div>
+                </div>
+              </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-dark" id="btnSave">Save</button>
+              </div>
+            </div>
+            
+            
+            
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <?php
+    if(isset($_GET['status'])){
+      if($_GET['status']==1){
+        ?>
+        <script>
+        const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Datos Guardados"
+      });
+        </script>
+        <?php
+      }
+    }
+  ?>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

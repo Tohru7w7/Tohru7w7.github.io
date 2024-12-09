@@ -22,7 +22,7 @@ create table proveedores(
 id INTEGER not null auto_increment,
 nombre VARCHAR(30),
 telefono varchar(20),
-producto varchar(30),
+producto int,
 cantidad numeric,
 pago INT,
 fecha_pedido DATE,
@@ -31,7 +31,7 @@ primary key(id)
 drop table productos
 select * from proveedores
 insert into proveedores values(0,'Juan Duran','636-123-4567','SERUM','40',3000,'2024/2/27')
-
+update proveedores set name='Joselin',telefono='636-123-45-67', producto=, cantidad='$cant', pago='$pago', fehca_pedido='$fecha'' where id=$id
 create table productos(
 id INTEGER not null auto_increment,
 name varchar(30),
