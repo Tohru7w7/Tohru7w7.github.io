@@ -1,6 +1,6 @@
 <?php
 include "./conexion.php";
-$id=$_POST['txtIdEdit'];
+$id=$_POST['txtId'];
 $name=$_POST['txtNameEdit'];
 $tel=$_POST['txtTelEdit'];
 $prod=$_POST['txtProductEdit'];
@@ -16,13 +16,9 @@ echo "Cantidad de productos: ".$cant."<br>";
 echo "Cuanto debe pagarse: ".$pago."<br>";
 echo "Fecha: ".$date."<br>";
 
-$consulta="update proveedores set 
-nombre='$name', telefono='$tel', 
-producto=$prod, cantidad=$cant, 
-pago=$pago, fecha_pedido='$date' 
-where id=$id";
+$consulta="update proveedores set nombre='$name',telefono='$tel', producto=$prod, cantidad=$cant, pago=$pago, fecha_pedido='$date' where id=$id";
 
 $conexion->query($consulta) or die($conexion->error);
-echo "dato actualizado correctamente";
+//echo "dato actualizado correctamente";
 //header("Location: ../provee.php?status=1");
 ?>
