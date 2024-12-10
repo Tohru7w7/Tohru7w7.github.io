@@ -180,7 +180,7 @@ if(isset($_SESSION['userdata'])){
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-dark" id="btnEdit">Save</button>
+            <button type="submit" class="btn btn-dark" id="btnEdit" >Save</button>
           </div>
         </form>
       </div>

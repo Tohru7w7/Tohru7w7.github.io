@@ -13,10 +13,10 @@ echo "Productos: ".$prod."<br>";
 echo "Cantidad de productos: ".$cant."<br>";
 echo "Cuanto debe pagarse: ".$hm."<br>";
 echo "Fecha: ".$date."<br>";
-//$consulta="insert into users values (0,'$name','$email','$level')";
-//echo ($consulta)
-//if(isset($_POST[]))
-$con="insert into proveedores values (0,'$name','$tel','$prod','$cant','$hm','$date')";
+
+echo ($consulta);
+
+$con="insert into proveedores values (0,'$name','$tel',$prod,$cant,$hm,'$date')";
 $conexion->query($con) or die($conexion->error);
 //echo "dato actualizado correctamente";
 header("Location: ../provee.php?status=1");

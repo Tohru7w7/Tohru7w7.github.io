@@ -2,7 +2,7 @@
      include  "./conexion.php";
      $user = $_POST['txtuser'];
      $pass = $_POST['txtpass'];
-     echo "Bienvenudo $user Password: $pass";
+     echo "Bienvenido $user Password: $pass";
      echo '<br>';
      $query="select * from users where name='$user' and password='$pass';";
      $res = $conexion->query($query);

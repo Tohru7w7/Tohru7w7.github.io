@@ -28,12 +28,12 @@ for(var i=0;i<botones.length;i++){
     var cant =btn.getAttribute("data-cant")
     var fecha =btn.getAttribute("data-fecha")
     var id =btn.getAttribute("data-id")
-    document.getElementById("txtIdEdit").value=id
-    document.getElementById("txtDateEdit").value=fecha
-    document.getElementById("txtTelEdit").value=phone
-    document.getElementById("txtProductEdit").value=prod
-    document.getElementById("txtCantProdEdit").value=cant
-    document.getElementById("txtHMEdit").value=pago
-    document.getElementById("txtNameEdit").value=name
+    document.getElementById("txtId").value=id
+    document.getElementById("txtDate").value=fecha
+    document.getElementById("txtTel").value=phone
+    document.getElementById("txtProduct").value=prod
+    document.getElementById("txtCantProd").value=cant
+    document.getElementById("txtHM").value=pago
+    document.getElementById("txtName").value=name
   }
 }

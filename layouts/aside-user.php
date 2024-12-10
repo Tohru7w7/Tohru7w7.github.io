@@ -7,4 +7,6 @@
         <li class="nav-item h5 mx-2"><a href="./index.php" class="nav-link text-white"><i class="bi bi-house px-2"></i>Home</a></li>
         <li class="nav-item h5 mx-2"><a href="./dietas-user.php" class="nav-link text-white"><i class="bi bi-heart-fill"></i>Todo</a></li>
         <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Labios</a></li>
+        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Labios</a></li>
+        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Labios</a></li>
     </aside>

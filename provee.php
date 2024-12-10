@@ -81,11 +81,11 @@ if(isset($_SESSION['userdata'])){
               <button class="btn btn-outline-warning btn-sm mx-2 btnEdit" 
                 data-id="<?php echo $fila['id'] ?>"
                 data-name="<?php echo $fila['nombre']; ?>"
-                data-phone="<?php echo $fila['telefono'] ?>"
-                data-prod="<?php echo $fila['producto'] ?>"
-                data-cant="<?php echo $fila['cantidad'] ?>"
-                data-pago="<?php echo $fila['pago'] ?>"
-                data-fecha="<?php echo $fila['fecha_pedido'] ?>"
+                data-phone="<?php echo $fila['telefono']; ?>"
+                data-prod="<?php echo $fila['producto']; ?>"
+                data-cant="<?php echo $fila['cantidad']; ?>"
+                data-pago="<?php echo $fila['pago']; ?>"
+                data-fecha="<?php echo $fila['fecha_pedido']; ?>"
                 data-bs-toggle="modal" data-bs-target="#modalEdit">
                   <i class="bi bi-pen"></i>
                 </button>
@@ -178,11 +178,11 @@ if(isset($_SESSION['userdata'])){
         </div>
         <form action="./php/provee_update.php" class="needs-validation" novalidate id="formEdit" method="post">
           <div class="modal-body">
-          <input type="hidden"  id="txtIdEdit" name="txtId">
+          <input type="show"  id="txtIdEdit" name="txtId">
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Nombre:</label>
-                <input id="txtNameEdit" name="txtName" type="text" class="form-control" placeholder="Insertar el nombre">
+                <input name="txtNameEdit" id="txtName" type="text" class="form-control" placeholder="Insertar el nombre">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
@@ -190,27 +190,27 @@ if(isset($_SESSION['userdata'])){
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Telefono:</label>
-                <input id="txtTelEdit" name="txtTel" type="tel" class="form-control" placeholder="Insertar el telefono">
+                <input name="txtTelEdit" id="txtTel" type="tel" class="form-control" placeholder="Insertar el telefono">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
             </div>
             <div class="col-15 mb-2">
                 <label for="">Producto:</label>
-                <input id="txtProductEdit" name="txtProduct" type="number" class="form-control" placeholder="Insertar el id del producto">
+                <input name="txtProductEdit" id="txtProduct" type="number" class="form-control" placeholder="Insertar el id del producto">
                 <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Datos invalidos</div>
               </div>
               <div class="row">
                 <div class="col-15 mb-2">
                   <label for="">Cantidad de productos:</label>
-                  <input id="txtCantProdEdit" name="txtCantProd" required min="1" required type="number" class="form-control" placeholder="Insertar la cantidad">
+                  <input name="txtCantProdEdit" id="txtCantProd" required min="1" required type="number" class="form-control" placeholder="Insertar la cantidad">
                   <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Datos invalidos</div>
                 </div>
                 <div class="col-15 mb-2">
                   <label for="">Cuanto debe pagarse:</label>
-                  <input id="txtHMEdit" name="txtHM" required min="1" required type="number" class="form-control" placeholder="Confirmar contraseña">
+                  <input name="txtHMEdit" id="txtHM" required min="1" required type="number" class="form-control" placeholder="Ingresar cantidad a pagar">
                   <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Datos invalidos</div>
                 </div>
@@ -218,14 +218,14 @@ if(isset($_SESSION['userdata'])){
               <div class="row">
                 <div class="col-15 mb-2">
                   <label for="">Fecha del pedido:</label>
-                  <input id="txtDateEdit"  name="txtDate" type="date" class="form-control" placeholder="Insertar la fecha">
+                  <input name="txtDateEdit"  id="txtDate" type="date" class="form-control" placeholder="Insertar la fecha">
                   <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Datos invalidos</div>
                 </div>
               </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-dark" id="btnSave" name="btnEdit" >Save</button>
+                <button type="submit" class="btn btn-dark" id="btnEdit" >Save</button>
               </div>
             </div>
             </div>
