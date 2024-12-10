@@ -33,10 +33,7 @@ if(isset($_SESSION['userdata'])){
       <!--end header-->
       <!--title section-->
       <div class="mx-4 d-flex justify-content-between">
-        <h1 class="h4">Productos en Stock</h1>
-        <div>
-          <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal1Add">Agregar</button>
-        </div>
+        <h1 class="h4">Todos los Productos</h1>
       </div>
       <!--end title section-->
       <section class="p-4 container">
@@ -60,7 +57,7 @@ if(isset($_SESSION['userdata'])){
                     <div class="card-body">
                       <h5 class="card-title">Pasta</h5>
                       <p class="card-text">Una pasta con crema, agregando espinacas y tomate para algo balanceado</p>
-                      <a href="#" class="btn btn-dark">Go somewhere</a>
+                      <a href="./producto1.php" class="btn btn-dark">Go somewhere</a>
                       <button class="btn btn-outline-danger btn-sm">
                   <i class="bi bi-trash"></i>
                 </button>

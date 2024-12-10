@@ -33,7 +33,7 @@
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    <li><a class="dropdown-item" href="./logout.php">Log Out</a></li>
                   </ul>
                 </li>
               </ul>
