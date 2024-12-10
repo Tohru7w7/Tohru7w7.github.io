@@ -24,5 +24,5 @@ where id=$id";
 
 $conexion->query($consulta) or die($conexion->error);
 echo "dato actualizado correctamente";
-//header("Location: ../provee.php?status=1");
+header("Location: ../provee.php?status=1");
 ?>

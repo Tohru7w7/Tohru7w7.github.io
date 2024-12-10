@@ -178,7 +178,7 @@ if(isset($_SESSION['userdata'])){
         </div>
         <form action="./php/provee_update.php" class="needs-validation" novalidate id="formEdit" method="post">
           <div class="modal-body">
-          <input type="show"  id="txtIdEdit" name="txtId">
+          <input type="hidden"  id="txtIdEdit" name="txtId">
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Nombre:</label>
@@ -225,7 +225,7 @@ if(isset($_SESSION['userdata'])){
               </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-dark" id="btnEdit" >Save</button>
+                <button type="submit" class="btn btn-dark" id="btnSave" name="btnEdit" >Save</button>
               </div>
             </div>
             </div>
@@ -246,7 +246,7 @@ if(isset($_SESSION['userdata'])){
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-  <script src="./js/users.js"></script>
+  <script src="./js/provee.js"></script>
 </body>
 </body>
 
