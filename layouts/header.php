@@ -25,6 +25,7 @@
                   <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <?php 
+                    $user=$_SESSION['userdata'];
                     echo $user['Nombre'];
                     ?>
                   </a>

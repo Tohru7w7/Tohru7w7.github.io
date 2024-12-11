@@ -31,7 +31,7 @@ primary key(id)
 drop table productos
 select * from proveedores
 insert into proveedores values(0,'Juan Duran','636-123-4567','SERUM','40',3000,'2024/2/27')
-update proveedores set name='Joselin',telefono='636-123-45-67', producto=, cantidad='$cant', pago='$pago', fehca_pedido='$fecha'' where id=$id
+
 create table productos(
 id INTEGER not null auto_increment,
 name varchar(30),
@@ -43,4 +43,6 @@ primary key(id)
 )
 select * from productos
 
-insert into productos values (0,'Serum',250.00,'img5.jpg',1,'bhsbhdas')
+insert into productos values (0,'Fijador','130.60','fijador.jpg',2,'Este spray fijador 2 en 1 te ayudará a matificar o sellar el maquillaje y además, prolonga su duración. Aplica al final de tu maquillaje o en tu rostro limpio para matificar ¡y olvídate del brillo! ')
+
+ 
