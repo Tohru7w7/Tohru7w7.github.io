@@ -56,9 +56,14 @@ $res=$conexion->query($sql) or die($conexion->error);
                     <div class="card-body">
                       <h5 class="card-title"><?php echo $fila['name']; ?></h5>
                       <p class="card-text"><?php echo $fila['des']; ?></p>
-                      <a href="./productos/p1.php?id=<?php echo $fila['id']; ?>" class="btn btn-dark">Go somewhere</a>
-                      <button class="btn btn-outline-danger btn-sm">
+                      <a href="./productos/p1.php?id=<?php echo $fila['id']; ?>" class="btn btn-dark">Más Detalles</a>
+                      <form action="./php/delete_prod.php" method="post" style="display:inline">
+                <input type="hidden" name="id" value="<?php echo $fila['id']; ?>">
+                  <button trpe="submit" class="btn btn-outline-danger btn-sm" 
+                  onclick="return confirm('Estas seguro de borrarlo?')">
                   <i class="bi bi-trash"></i>
+                </button>
+              </form>
                 </button>
                     </div>
                   </div>

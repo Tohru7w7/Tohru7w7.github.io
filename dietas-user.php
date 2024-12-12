@@ -3,7 +3,16 @@ if(isset($_SESSION['userdata'])){
   $user=$_SESSION['userdata'];
 }else{
   header("Location: ./login.php");
-}?>
+}
+include "./php/conexion.php";
+$sql="select * from productos order by id";
+$res=$conexion->query($sql) or die($conexion->error);
+include "./php/conexion.php";
+$sql="select * from productos order by id";
+$res=$conexion->query($sql) or die($conexion->error);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,14 +30,14 @@ if(isset($_SESSION['userdata'])){
   <div class="d-flex">
     <!--sidebbar-->
     <?php
-      include "./layouts/aside.php"
+      include "./layouts/aside-user.php"
     ?>
     <!--end sidebbar-->
 
     <main class="flex-grow-1">
       <!--hedear-->
       <?php
-      include "./layouts/header.php"
+      include "./layouts/header-user.php"
     ?>
       <!--end header-->
       <!--title section-->
@@ -37,27 +46,38 @@ if(isset($_SESSION['userdata'])){
       </div>
       <!--end title section-->
       <section class="p-4 container">
+      <div>
+        <a href="./index.html" class="btn btn-dark">Volver</a>
+        </div>
         <div class="row">
+
+        <?php
+            while($fila=mysqli_fetch_array($res)){
+            ?>
             <div class="col-3 mt-2 p-2">
                 <div class="card" >
-                    <img src="./img/setum.webp" height="300px" class="card-img-top" alt="...">
+                    <img src="./img/<?php echo $fila['img']; ?>" height="350px" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Snack</h5>
-                      <p class="card-text">Un snack de yogurd natural, agregando frutas saludables para dar un extra al snack</p>
-                      <a href="#" class="btn btn-dark">Go somewhere</a>
-                      <button class="btn btn-outline-danger btn-sm">
-                  <i class="bi bi-trash"></i>
+                      <h5 class="card-title"><?php echo $fila['name']; ?></h5>
+                      <p class="card-text"><?php echo $fila['des']; ?></p>
+                      <a href="./productos/p1.php?id=<?php echo $fila['id']; ?>" class="btn btn-dark">Más Detalles</a>
+                      
                 </button>
                     </div>
                   </div>
             </div>
+            <?php
+            }
+            ?>
+
+<!--
             <div class="col-3 mt-2 p-2">
                 <div class="card" >
                     <img src="./img/lipstic.webp" height="300px" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Pasta</h5>
                       <p class="card-text">Una pasta con crema, agregando espinacas y tomate para algo balanceado</p>
-                      <a href="./producto1.php" class="btn btn-dark">Go somewhere</a>
+                      <a href="#" class="btn btn-dark">Go somewhere</a>
                       <button class="btn btn-outline-danger btn-sm">
                   <i class="bi bi-trash"></i>
                 </button>
@@ -70,7 +90,7 @@ if(isset($_SESSION['userdata'])){
                     <div class="card-body">
                       <h5 class="card-title">Sopa de Dumplings</h5>
                       <p class="card-text">uejjfhjhjhjefhjhjeheffiuwhgvuiwehbuijngijgjitgjiggijgjigjgjirtgerhsnrnhjksenhjes</p>
-                      <a href="#" class="btn btn-dark">Go somewhere</a>
+                      <a href="./productos/p1.php" class="btn btn-dark">Go somewhere</a>
                       <button class="btn btn-outline-danger btn-sm">
                   <i class="bi bi-trash"></i>
                 </button>
@@ -141,9 +161,10 @@ if(isset($_SESSION['userdata'])){
                 </button>
                 </div>
               </div>
-        </div>
-        </div>
         
+            </div>
+          </div>
+          -->
       </section>
 
     </main>

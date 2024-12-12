@@ -4,9 +4,9 @@
         MrAmor
       </h2>
       <ul class="nav flex-column">
-        <li class="nav-item h5 mx-2"><a href="./index.php" class="nav-link text-white"><i class="bi bi-house px-2"></i>Home</a></li>
         <li class="nav-item h5 mx-2"><a href="./dietas-user.php" class="nav-link text-white"><i class="bi bi-heart-fill"></i>Todo</a></li>
-        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Labios</a></li>
-        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Labios</a></li>
-        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-vcard"></i>Labios</a></li>
+        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-emoji-kiss"></i>Rostro</a></li>
+        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-eye"></i>Ojos</a></li>
+        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-heart"></i>Labios</a></li>
+        <li class="nav-item h5 mx-2"><a href="./car.php" class="nav-link text-white"><i class="bi bi-person-heart"></i>Cuidado Personal</a></li>
     </aside>

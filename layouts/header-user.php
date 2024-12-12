@@ -24,14 +24,17 @@
                 <li class="nav-item dropdown mx-4">
                   <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                  
+                    <?php 
+                    $user=$_SESSION['userdata'];
+                    echo $user['Nombre'];
+                    ?>
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Perfil</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    <li><a class="dropdown-item" href="./logout.php">Log Out</a></li>
                   </ul>
                 </li>
               </ul>

@@ -180,7 +180,7 @@ if(isset($_SESSION['userdata'])){
         </div>
         <form action="./php/provee_update.php" class="needs-validation" novalidate id="formEdit" method="post">
           <div class="modal-body">
-          <input type="hiden"  id="txtIdEdit" name="txtIdEdit">
+          <input type="hidden"  id="txtIdEdit" name="txtIdEdit">
             <div class="row">
               <div class="col-15 mb-2">
                 <label for="">Nombre:</label>
